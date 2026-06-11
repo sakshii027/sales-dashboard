@@ -6,7 +6,11 @@ import plotly.express as px
 st.set_page_config(page_title="Sales Analytics Dashboard", layout="wide")
 
 # Load data
-df = pd.read_csv("sales.csv")
+@st.cache_data
+def load_data():
+    return pd.read_csv("sales.csv")
+
+df = load_data()
 
 # Title
 st.title("📊 Sales Analytics Dashboard")
