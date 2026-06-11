@@ -21,7 +21,7 @@ st.markdown("""
 st.title("📊 Advanced Sales Dashboard 🚀")
 
 # Load data
-df = pd.read_csv("data/sales.csv")
+df = pd.read_csv("sales.csv")
 df.columns = df.columns.str.strip()
 
 df["Order Date"] = pd.to_datetime(df["Order Date"], errors='coerce')
